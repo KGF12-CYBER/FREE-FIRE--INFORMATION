@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🔥 Free Fire API Tool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg,#020617,#0f172a,#1e293b,#020617);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:#fff;
+}
+
+@keyframes gradientBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+.container{
+    max-width:900px;
+    background:rgba(30,41,59,0.85);
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+h1{
+    color:#facc15;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+/* Main Menu Buttons */
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:50px;
+}
+
+.menu a{
+    padding:20px 30px;
+    font-size:1.3rem;
+    font-weight:bold;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    transition:0.3s;
+    text-align:center;
+}
+
+.menu a:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Main Button Colors */
+.p{background:#22c55e;}  /* Personal Info */
+.s{background:#38bdf8;}  /* Search Account */
+.st{background:#f97316;} /* Player Stats */
+
+/* Telegram Button */
+.telegram {
+    margin-top:30px;
+}
+
+.telegram a{
+    display:inline-block;
+    padding:25px 60px;
+    background:#229ED9;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:1.5rem;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(34,158,217,.6);
+    transition:.3s;
+}
+
+.telegram a:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(34,158,217,1);
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>🔥 Free Fire INFORMATION Tool</h1>
+    
+    <!-- Main Menu Buttons (এক লাইনে পাশে পাশে) -->
+    <div class="menu">
+        <a class="p" href="personal.html">👤 Personal Info</a>
+        <a class="s" href="search.html">🔍 Search Account</a>
+        <a class="st" href="stats.html">📊 Player Stats</a>
+    </div>
+    
+    <!-- Telegram Button (নিচে বড়) -->
+    <div class="telegram">
+        <a href="https://t.me/KGF_BD_TEAM" target="_blank">🚀 Join Our Telegram Group</a>
+    </div>
+</div>
+</body>
+</html>
