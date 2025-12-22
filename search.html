@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Search Account</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{background:#0f172a;color:#fff;font-family:Arial;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+.container{max-width:500px;background:rgba(30,41,59,0.85);padding:25px;border-radius:12px;text-align:center;}
+h1{color:#facc15;margin-bottom:20px;}
+input,select,button{width:100%;padding:12px;margin-top:10px;border-radius:8px;border:none;font-weight:bold;}
+button{background:#38bdf8;cursor:pointer;}
+.result{margin-top:15px;background:#020617;padding:10px;border-radius:8px;white-space:pre-wrap;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🔍 Search Account</h1>
+<form id="searchForm">
+    <select id="server">
+        <option value="IND">IND</option><option value="SG">SG</option><option value="RU">RU</option>
+        <option value="ID">ID</option><option value="TW">TW</option><option value="US">US</option>
+        <option value="VN">VN</option><option value="TH">TH</option><option value="ME" selected>ME</option>
+        <option value="PK">PK</option><option value="CIS">CIS</option><option value="BR">BR</option>
+    </select>
+    <input type="text" id="keyword" placeholder="Enter Keyword" required>
+    <button type="button" onclick="fetchSearch()">Search</button>
+</form>
+<div class="result" id="result"></div>
+<script>
+function fetchSearch(){
+    let server=document.getElementById('server').value;
+    let keyword=document.getElementById('keyword').value;
+    if(!keyword) return alert("Enter keyword!");
+    fetch(`https://freefire-api-six.vercel.app/get_search_account_by_keyword?server=${server}&keyword=${keyword}`)
+    .then(res=>res.json())
+    .then(data=>document.getElementById('result').textContent=JSON.stringify(data,null,2))
+    .catch(err=>document.getElementById('result').textContent=err);
+}
+</script>
+</div>
+</body>
+</html>
