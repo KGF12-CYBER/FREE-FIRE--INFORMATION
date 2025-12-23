@@ -2,111 +2,165 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>🔥 Free Fire API Tool</title>
+<title>⚡ Free Fire Hacker Tool</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
     margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg,#020617,#0f172a,#1e293b,#020617);
-    background-size: 400% 400%;
-    animation: gradientBG 12s ease infinite;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Share Tech Mono', monospace;
+}
+
+/* ===== Hacker Animated Background ===== */
+body{
+    min-height:100vh;
+    background:#000;
+    overflow:hidden;
+    color:#00ff9c;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
-    color:#fff;
 }
 
-@keyframes gradientBG {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(transparent 95%, rgba(0,255,140,.15) 100%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0,255,140,.05) 0,
+        rgba(0,255,140,.05) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+    animation:scan 6s linear infinite;
+    z-index:-1;
 }
 
+@keyframes scan{
+    0%{background-position:0 0;}
+    100%{background-position:0 100%;}
+}
+
+/* ===== Main Box ===== */
 .container{
+    width:95%;
     max-width:900px;
-    background:rgba(30,41,59,0.85);
+    background:rgba(0,0,0,.75);
+    border:1px solid #00ff9c;
     padding:40px;
-    border-radius:12px;
+    border-radius:15px;
+    box-shadow:0 0 25px #00ff9c;
     text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
+/* ===== Title ===== */
 h1{
-    color:#facc15;
+    color:#00ff9c;
     font-size:2.5rem;
     margin-bottom:40px;
+    text-shadow:0 0 15px #00ff9c;
 }
 
-/* Main Menu Buttons */
+/* ===== Menu Buttons ===== */
 .menu{
     display:flex;
+    flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
+    gap:25px;
     margin-bottom:50px;
 }
 
 .menu a{
-    padding:20px 30px;
-    font-size:1.3rem;
-    font-weight:bold;
-    color:#fff;
+    min-width:220px;
+    padding:22px;
+    font-size:1.2rem;
+    color:#00ff9c;
     text-decoration:none;
+    border:2px solid #00ff9c;
     border-radius:12px;
-    transition:0.3s;
-    text-align:center;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.menu a::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(0,255,140,.4),transparent);
+    transition:.4s;
+}
+
+.menu a:hover::before{
+    left:100%;
 }
 
 .menu a:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    background:#00ff9c;
+    color:#000;
+    box-shadow:0 0 20px #00ff9c;
+    transform:translateY(-5px);
 }
 
-/* Main Button Colors */
-.p{background:#22c55e;}  /* Personal Info */
-.s{background:#38bdf8;}  /* Search Account */
-.st{background:#f97316;} /* Player Stats */
-
-/* Telegram Button */
-.telegram {
-    margin-top:30px;
-}
-
+/* ===== Telegram Button ===== */
 .telegram a{
     display:inline-block;
-    padding:25px 60px;
-    background:#229ED9;
-    color:#fff;
+    padding:25px 70px;
+    font-size:1.4rem;
+    color:#000;
+    background:#00ff9c;
     text-decoration:none;
-    border-radius:30px;
-    font-size:1.5rem;
-    font-weight:bold;
-    box-shadow:0 0 20px rgba(34,158,217,.6);
+    border-radius:40px;
+    box-shadow:0 0 30px #00ff9c;
     transition:.3s;
 }
 
 .telegram a:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 25px rgba(34,158,217,1);
+    transform:scale(1.08);
+    box-shadow:0 0 45px #00ff9c;
+}
+
+/* ===== Footer Hacker Text ===== */
+.footer{
+    margin-top:35px;
+    font-size:.9rem;
+    color:#0f0;
+    opacity:.7;
 }
 </style>
 </head>
+
 <body>
+
 <div class="container">
-    <h1>🔥 Free Fire INFORMATION Tool</h1>
-    
-    <!-- Main Menu Buttons (এক লাইনে পাশে পাশে) -->
+    <h1>☠ FREE FIRE HACKER INFO PANEL ☠</h1>
+
     <div class="menu">
-        <a class="p" href="personal.html">👤 Personal Info</a>
-        <a class="s" href="search.html">🔍 Search Account</a>
-        <a class="st" href="stats.html">📊 Player Stats</a>
+        <a href="personal.html">👤 PERSONAL INFO</a>
+        <a href="search.html">🔍 SEARCH ACCOUNT</a>
+        <a href="stats.html">📊 PLAYER STATS</a>
     </div>
-    
-    <!-- Telegram Button (নিচে বড়) -->
+
     <div class="telegram">
-        <a href="https://t.me/KGF_BD_TEAM" target="_blank">🚀 Join Our Telegram Group</a>
+        <a href="https://t.me/KGF_BD_TEAM" target="_blank">
+            🚀 JOIN TELEGRAM COMMUNITY
+        </a>
+    </div>
+
+    <div class="footer">
+        ▓▒░ System Connected ░▒▓ | Powered by Kalyan King
     </div>
 </div>
+
 </body>
 </html>
